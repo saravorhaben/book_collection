@@ -28,6 +28,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: "Book was successfully created." }
         format.json { render :show, status: :created, location: @book }
       else
+        flash.now[:notice] ="Book could not be created"
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
@@ -69,6 +70,7 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.require(:book).permit(:title)
+      params.require(:book).permit(:title , :author, :price, :published_date)
+      #params.require(:book).permit(:title )
     end
 end
