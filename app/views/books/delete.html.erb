@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Deleting book</h1>
+
+<div>
+  <p> Are you sure you want to destroy this book? </p>
+  <%= render @book %>
+  <%= button_to "Destroy this book", @book, method: :delete, data: { confirm: "Are you absolutely sure?" } %>
+  <%= link_to "Back to books", books_path %>
+</div>
