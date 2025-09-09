@@ -41,7 +41,7 @@ RSpec.describe "Books", type: :system do
     visit 'books/new'
     fill_in 'Title', with: 'meow'
     fill_in 'Author', with: 'me'
-    fill_in 'Published date', with: "2025-09-12"
+    fill_in 'Published date', with: "2025-01-12"
     fill_in 'Price', with: '9'
     click_on 'Create Book'
     expect(page).to have_content('Book was successfully created.')
@@ -80,7 +80,7 @@ RSpec.describe "Books", type: :system do
     fill_in 'Title', with: 'Gold'
     fill_in 'Author', with: 'me'
     fill_in 'Price', with: '9'
-    fill_in "Published date", with: "2025-09-12"
+    fill_in "Published date", with: "2025-01-12"
     click_on 'Create Book'
     expect(page).to have_content('Book was successfully created.')
   end
