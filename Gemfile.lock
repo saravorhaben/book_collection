@@ -69,6 +69,7 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.3.0)
+    bigdecimal (3.2.3)
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
@@ -86,6 +87,7 @@ GEM
     crass (1.0.6)
     date (3.4.1)
     diff-lcs (1.6.2)
+    docile (1.4.1)
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -111,9 +113,9 @@ GEM
     matrix (0.4.3)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.9)
     minitest (5.25.5)
     msgpack (1.8.0)
+    mutex_m (0.3.0)
     net-imap (0.5.10)
       date
       net-protocol
@@ -124,8 +126,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.9)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
     pg (1.6.2-x86_64-linux)
     public_suffix (6.0.2)
@@ -164,8 +165,8 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.3.0)
-    regexp_parser (2.11.2)
-    rexml (3.4.3)
+    regexp_parser (2.11.3)
+    rexml (3.4.4)
     rspec-core (3.13.5)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -188,6 +189,12 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.2)
+    simplecov_json_formatter (0.1.4)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -221,22 +228,25 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.18)
+    zeitwerk (2.7.3)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bigdecimal
   bootsnap
   capybara
   concurrent-ruby (= 1.3.4)
   importmap-rails
   jbuilder
+  mutex_m
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
   rspec-rails
   selenium-webdriver
+  simplecov
   sprockets-rails
   stimulus-rails
   turbo-rails
@@ -245,7 +255,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.4.5p51
 
 BUNDLED WITH
    2.3.14
