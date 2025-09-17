@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.4.5"
 gem 'concurrent-ruby', '1.3.4' 
-
 gem "bigdecimal"
 gem "mutex_m"
 
@@ -58,7 +57,12 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+  gem 'simplecov', :require => false
+end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
