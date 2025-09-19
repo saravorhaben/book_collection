@@ -53,15 +53,16 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 7.1'
 end
+
 
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'simplecov', :require => false
+   gem 'drb'
 end
 
 group :development do
@@ -75,12 +76,12 @@ group :development do
   # gem "spring"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
-end
+# group :test do
+#   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+#   gem "capybara"
+#   gem "selenium-webdriver"
+#   gem "webdrivers"
+# end
 
 
 group :production do
